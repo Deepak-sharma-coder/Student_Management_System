@@ -1,0 +1,210 @@
+/* ---------- Page ---------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f3e6d5 0%, #e9d5bb 100%);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  padding: 16px;
+}
+
+/* ---------- Card ---------- */
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 40px rgba(20, 33, 61, 0.12);
+  border-top: 5px solid #2457c5;
+  animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card h1 {
+  margin: 0 0 6px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #14213d;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #5b6676;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ---------- Fields ---------- */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #14213d;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: #14213d;
+  background: #f8fafc;
+  border: 1.5px solid #cdd5df;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.field input::placeholder {
+  color: #9aa5b4;
+}
+
+.field input:hover {
+  border-color: #a9b6c7;
+}
+
+.field input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #2457c5;
+  box-shadow: 0 0 0 4px rgba(36, 87, 197, 0.15);
+}
+
+.field input.invalid {
+  border-color: #d62839;
+  background: #fff8f8;
+}
+
+.field input.invalid:focus {
+  box-shadow: 0 0 0 4px rgba(214, 40, 57, 0.15);
+}
+
+/* ---------- Password show/hide ---------- */
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  padding-right: 70px;
+}
+
+.toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2457c5;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.toggle:hover {
+  background: rgba(36, 87, 197, 0.1);
+}
+
+/* ---------- Messages ---------- */
+.error {
+  color: #d62839;
+  font-size: 0.82rem;
+  margin-top: 5px;
+}
+
+.server-error {
+  background: #fdecee;
+  color: #a11d2b;
+  border-left: 4px solid #d62839;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.success {
+  background: #e6f7ec;
+  color: #1a7f3c;
+  border-left: 4px solid #1a7f3c;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Button ---------- */
+.submit {
+  width: 100%;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2457c5, #1b44a0);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 87, 197, 0.35);
+}
+
+.submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ---------- Bottom link ---------- */
+.switch-text {
+  margin: 20px 0 0;
+  display: block;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #5b6676;
+}
+
+.switch-text a {
+  color: #2457c5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 420px) {
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .login-card h1 {
+    font-size: 1.45rem;
+  }
+}
